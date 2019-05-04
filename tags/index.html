@@ -14,7 +14,7 @@
     
     
     
-    <title>Archives | Hexo</title>
+    <title>Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -23,9 +23,10 @@
     <meta name="keywords" content>
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-04T09:36:30.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
     
@@ -69,14 +70,14 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect active">
+            <li class="waves-block waves-effect">
               <a href="/archives">
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
-            <li class="waves-block waves-effect">
+            <li class="waves-block waves-effect active">
               <a href="/tags">
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
@@ -122,7 +123,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Archives</div>
+        <div class="flex-col header-title ellipsis">Tags</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -141,56 +142,34 @@
         
     </div>
 </header>
-<header class="content-header archives-header">
+<header class="content-header tags-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Archives</h1>
+        <h1 class="title">Tags</h1>
         <h5 class="subtitle">
             
         </h5>
     </div>
 
     
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+             active">All</a>
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" onclick="BLOG.tabBar(this)" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
 
 
 </header>
 
 <div class="container body-wrap fade">
     
-
-    
-            
-            <h3 class="archive-separator">May, 2019</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2019-05-04 16:38:53" datetime="2019-05-04T08:38:53.049Z" itemprop="datePublished">2019-05-04</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2019/05/04/hello-world/">Hello World</a>
-    </h3>
-  
-
-
-
-    
-  </article>
-</div>
-
-    
-    </div>
-
     
 </div>
 
@@ -233,7 +212,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/archives/&title=Hexo&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/tags/&title=Hexo&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -243,22 +222,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/archives/&title=Hexo&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/tags/&title=Hexo&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/archives/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/tags/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Hexo&url=http://yoursite.com/archives/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Hexo&url=http://yoursite.com/tags/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/archives/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/tags/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -269,7 +248,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABuElEQVR42u3aQXKDMAwFUO5/6fQAGZMvCbssHqtOA/KDhUa2dF3x9Sle38+uYl47Llxc3DE3WXhFySOs7qxGwMXFPcm9TzQ5dPVs8p8o2eHi4r6ee5+GVvdUPwcuLu77udXS5/4lcXFx38xNNj/3KazK2r5Xw8XFHXDzU8p9f28538XFxW1xew2SPOVVD0Z/rI6Li3uEmyeU6pFHXsTk6+Li4p7nzlPMaLsSfxpcXNyT3N7gVO+VJjNXuLi4Z7hJmVJNYUmC60XDxcU9w81DJ+MUvY1QvgouLu5ubg/Ra8H2hjZ+1GK4uLgbuNUUMzn4mHyIKO/i4uI+xM2LjMmgRrXmWj6Fi4t7kNsbwEqONfMIER0XF/cIt9camaAno6K4uLgnuc3eSzHB9cY1lns1XFzcI9xJwyOPU23rRk1WXFzcbdwEVE1hvUKnUIXh4uJu4H6KV2/hx9ozuLi4R7i9FulToasDHLi4uCe5veSV3JkUPeVfcXFxD3KriaY3ujEZ5sDFxX0z99ltTHn8AhcX98Xc3a8UdX5wcXE3c3ujEr0RrqQAwsXF/V/u/HDzqYZrb3gLFxf3Ue4fuO+Qn+8NT6oAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABVUlEQVR42u3aQQ6DMAxEUe5/aSp1hYRwx+MUCeZnhapQHos4tsm2yWP/juP18Zd6znnmsgEL1otYeznOj9T/QeFe0mHBimQpQUFf/PW99XxYsGDp23N9FyxYsO4JEPU/wIIFy2Mpia+++G/N5WHBegXLayR513/vb8GC9UDWbg09ZHhPgQUrjVV/LFGChdLS7RbAsGClseplr6AnL3M5BxasMNYkBOjLXj+asCAywYL1WJaO6H5EWdYkggUrgKWn0d5S95JsWLDSWN2G0dqDCJf3woIVxuomx5PGk7l5w4IVwOoem+u2n/RPNbBgwfKKVSVF7pbNsGClscyjAFbR20iaYcEKY03avt0Gk77xw4KVyfKSWu/BjVIWFqxIltIAWpUuS1UqLFiwmiFgUrguDhCwYAWwlNCgp8U/XgMWrEhW99iBt53DggVrMvTjd/PDQ7BghbE+AXY1/YRNUH8AAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
