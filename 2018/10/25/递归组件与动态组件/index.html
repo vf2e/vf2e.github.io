@@ -21,20 +21,20 @@
     
     
     <meta name="keywords" content="Vue">
-    <meta name="description" content="递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。比如下面的示例： 12345678910&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;    &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt">
+    <meta name="description" content="递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="递归组件与动态组件">
 <meta property="og:url" content="http://yoursite.com/2018/10/25/递归组件与动态组件/index.html">
 <meta property="og:site_name" content="小小宋">
-<meta property="og:description" content="递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。比如下面的示例： 12345678910&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;    &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt">
+<meta property="og:description" content="递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/11/22/167398b8f5a828b1?w=1600&h=676&f=png&s=44587">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/11/22/167398c004dc0c60?w=328&h=166&f=png&s=18861">
-<meta property="og:updated_time" content="2019-05-06T16:30:51.074Z">
+<meta property="og:updated_time" content="2019-05-11T06:29:15.411Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="递归组件与动态组件">
-<meta name="twitter:description" content="递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。比如下面的示例： 12345678910&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;    &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt">
+<meta name="twitter:description" content="递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。">
 <meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/11/22/167398b8f5a828b1?w=1600&h=676&f=png&s=44587">
     
         <link rel="alternate" type="application/atom+xml" title="小小宋" href="/atom.xml">
@@ -108,7 +108,7 @@
             <li class="waves-block waves-effect">
               <a href="/custom">
                 <i class="icon icon-lg icon-link"></i>
-                About
+                关于
               </a>
             </li>
         
@@ -129,7 +129,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -191,11 +191,12 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="递归组件与动态组件"><a href="#递归组件与动态组件" class="headerlink" title="递归组件与动态组件"></a>递归组件与动态组件</h1><h2 id="递归组件"><a href="#递归组件" class="headerlink" title="递归组件"></a>递归组件</h2><p>递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 <code>name</code> 选项。比如下面的示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;my-component&gt;&lt;/my-component&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &apos;my-component&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+            <h1 id="递归组件与动态组件"><a href="#递归组件与动态组件" class="headerlink" title="递归组件与动态组件"></a>递归组件与动态组件</h1><h2 id="递归组件"><a href="#递归组件" class="headerlink" title="递归组件"></a>递归组件</h2><p>递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 <code>name</code> 选项。<br><a id="more"></a><br>比如下面的示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hello World'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;my-component&gt;&lt;/my-component&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  export default &#123;</span></span><br><span class="line"><span class="regexp">    name: 'my-component'</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
 <p>在 Webpack 中导入一个 Vue.js 组件，一般是通过 <code>import myComponent from &#39;xxx&#39;</code> 这样的语法，然后在当前组件（页面）的 <code>components: { myComponent }</code> 里注册组件。这种组件是不强制设置 <code>name</code> 字段的，组件的名字都是使用者在 import 进来后自定义的，但递归组件的使用者是组件自身，它得知道这个组件叫什么，因为没有用 <code>components</code> 注册，所以 <code>name</code> 字段就是必须的了。除了递归组件用 <code>name</code>，我们在之前的小节也介绍过，用一些特殊的方法，通过遍历匹配组件的 name 选项来寻找组件实例。</p>
 <p>不过呢，上面的示例是有问题的，如果直接运行，会抛出 <code>max stack size exceeded</code> 的错误，因为组件会无限递归下去，死循环。解决这个问题，就要给递归组件一个限制条件，一般会在递归组件上用 <code>v-if</code> 在某个地方设置为 <code>false</code> 来终结。比如我们给上面的示例加一个属性 count，当大于 5 时就不再递归：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;my-component :count=&quot;count + 1&quot; v-if=&quot;count &lt;= 5&quot;&gt;&lt;/my-component&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    name: &apos;my-component&apos;,</span><br><span class="line">    props: &#123;</span><br><span class="line">      count: &#123;</span><br><span class="line">        type: Number,</span><br><span class="line">        default: 1</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;my-component :count=<span class="string">"count + 1"</span> v-<span class="keyword">if</span>=<span class="string">"count &lt;= 5"</span>&gt;&lt;/my-component&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">  export default &#123;</span></span><br><span class="line"><span class="regexp">    name: 'my-component',</span></span><br><span class="line"><span class="regexp">    props: &#123;</span></span><br><span class="line"><span class="regexp">      count: &#123;</span></span><br><span class="line"><span class="regexp">        type: Number,</span></span><br><span class="line"><span class="regexp">        default: 1</span></span><br><span class="line"><span class="regexp">      &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
 <p>所以，总结下来，实现一个递归组件的必要条件是：</p>
 <ul>
 <li>要给组件设置 <strong>name</strong>；</li>
@@ -256,7 +257,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-05-06T16:30:51.074Z" itemprop="dateUpdated">2019-05-07 00:30:51</time>
+    Last updated: <time datetime="2019-05-11T06:29:15.411Z" itemprop="dateUpdated">2019-05-11 14:29:15</time>
 </span><br>
 
 
@@ -302,7 +303,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/25/递归组件与动态组件/&title=《递归组件与动态组件》 — 小小宋&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/25/递归组件与动态组件/&title=《递归组件与动态组件》 — 小小宋&source=递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -408,7 +409,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -440,7 +441,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/25/递归组件与动态组件/&title=《递归组件与动态组件》 — 小小宋&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/25/递归组件与动态组件/&title=《递归组件与动态组件》 — 小小宋&source=递归组件与动态组件递归组件递归组件就是指组件在模板中调用自己，开启递归组件的必要条件，就是在组件中设置一个 name 选项。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
