@@ -14,7 +14,7 @@
     
     
     
-    <title>递归组件与动态组件 | 小小宋</title>
+    <title>provide和inject | 小小宋</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#0081ff">
@@ -24,14 +24,14 @@
     <meta name="description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="递归组件与动态组件">
-<meta property="og:url" content="http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/index.html">
+<meta property="og:title" content="provide和inject">
+<meta property="og:url" content="http://yoursite.com/2018/10/28/provide和inject/index.html">
 <meta property="og:site_name" content="小小宋">
 <meta property="og:description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-12T15:25:31.678Z">
+<meta property="og:updated_time" content="2019-05-12T15:27:39.832Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="递归组件与动态组件">
+<meta name="twitter:title" content="provide和inject">
 <meta name="twitter:description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
     
         <link rel="alternate" type="application/atom+xml" title="小小宋" href="/atom.xml">
@@ -120,7 +120,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">递归组件与动态组件</div>
+        <div class="flex-col header-title ellipsis">provide和inject</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -142,7 +142,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">递归组件与动态组件</h1>
+        <h1 class="title">provide和inject</h1>
         <h5 class="subtitle">
             
                 <time datetime="2018-10-27T16:00:00.000Z" itemprop="datePublished" class="page-time">
@@ -170,10 +170,10 @@
     </aside>
 
 
-<article id="post-组件的通信 1：provide   inject" class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-provide和inject" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">递归组件与动态组件</h1>
+        <h1 class="post-card-title">provide和inject</h1>
         <div class="post-meta">
             <time class="post-time" title="2018-10-28 00:00:00" datetime="2018-10-27T16:00:00.000Z" itemprop="datePublished">2018-10-28</time>
 
@@ -251,12 +251,12 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-05-12T15:25:31.678Z" itemprop="dateUpdated">2019-05-12 23:25:31</time>
+    Last updated: <time datetime="2019-05-12T15:27:39.832Z" itemprop="dateUpdated">2019-05-12 23:27:39</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/10/28/组件的通信 1：provide   inject/" target="_blank" rel="external">http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/10/28/provide和inject/" target="_blank" rel="external">http://yoursite.com/2018/10/28/provide和inject/</a>
         
     </div>
     
@@ -287,7 +287,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -297,22 +297,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《递归组件与动态组件》 — 小小宋&url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《provide和inject》 — 小小宋&url=http://yoursite.com/2018/10/28/provide和inject/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -438,7 +438,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -448,22 +448,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《递归组件与动态组件》 — 小小宋&url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《provide和inject》 — 小小宋&url=http://yoursite.com/2018/10/28/provide和inject/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -474,7 +474,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACu0lEQVR42u3aS47bMBAFQN//0hMgm2QRyq8/zDhIaWXIlsTiACLndb9e8fH185h8/v3M6c7PZ053WDjw8PDwWkM/HclvTledBvdMeh5DPmY8PDy827xkMchf2clQ8mUguep4Hg8PD+9beflV+Qs9uWcyHjw8PLx/hVcd4iQKwcPDw/s0Xr7xLdz68SmTKb6SteDh4eHFvL9TANv9/HH1PTw8vP+G1ytrPW+vqyFsXvoqjxYPDw/vAi8v1edb5GRw1UJXsiQU/mPAw8PDG/N65au82J8sJPmmOWEcv8XDw8Nb4vWWhK1wNv8LVCNdPDw8vNu8/BWcb5GTV3lSxMoDkePCgIeHh7fEq764k4HON995Q8Cb7TUeHh7eNV4vWp3U6+dNDIWFAQ8PD+8Cb1LWqhbGqlv2vP2rkGfg4eHhrfLmLQLVV3x1agrBBB4eHt4FXl5wyjfcvVd/r1nhNZ9LPDw8vCJv0myaDGt3svLGhWbWgoeHhxcnA72CVj4R8xg3j4bLTVd4eHh4q7zq4JqPX2pcON4BDw8Pb5U3KUE149TWpDTDZTw8PLwLvF7ckEcSc0Y1m8XDw8O7zasGptFsxeDeklPYjuPh4eFd491jJAvAbuAbrSF4eHh4S7w8XKhuu6uFsflI/pC14OHh4S3xRhfEC0ke7+bxcTngwMPDw1vi5QtD9dv8/FZjwWjdw8PDwxvwqoFF+ZGtxKBXJMPDw8O7wes1SFW31PMg4zU/8PDw8JZ4X8WjF0NUh5sX5N7cEw8PD+8Cb75s5OdzfK/1amEJwcPDw4t58wcnj5+0ETz/5s3k4uHh4V3j5Vvb6mb3HiOaVjw8PLxv5W2Fswl+ktPi4eHhfRovbxfIP/fuGU0QHh4e3jVeNYyYFKvyIGOhLQwPDw/vAm/ekpU8vorptXZd6TjDw8PD+3X8AHbuDQHxUzIiAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS46EMAxFUfa/aXraUqvCfTbVUpzLCFEU5DCw/Ml14eMGx6f7f1/5e77+18uHDBkytmWQxa2vrJdF7ifvfXijDBkyDmCQRZAQmfLW7+JPkCFDhoz0nAfTzueTIUOGjPXj1kkeCcf8fhkyZMjgRSwB8LSPB/eXa3EZMmRsyOBd9/8//8p8Q4YMGVsx7vDgT6ulhsVVyZAhYzSDB7japorXWmlkPTJkyBjK4KVjupEiLYk7TT0ZMmScwKi179OgzPFpEilDhozZjHQ8wJNCMkioJaMP6aMMGTLGMUiriwc7/iFqAf3jCmXIkDGaQUrWzq/8nnRLx5W+RoYMGZszSP7IF8EDblroxtsyZMiQMYLBG17kcf0ilg8n0J4RGTJkjGCkCVnrNWGpnI4fZMiQMZWRFo1k0FgbG7QKVxkyZIxmdJbbSfVqSWGw2UKGDBnHMMhDa2POWuutmOfKkCFjcwZPwvhIgP/KA2txz4gMGTJGMDpDRJ7kkTFnfwgqQ4aM2Yxaaz4NrLVGWxCaZciQcRgjLVw7wbqfVsqQIeNMRrrxKx0V8I1iPK2UIUPGVMYdHv1W2lfacDJkyBjNqAW72tigViT3Q7wMGTJmMEiQ5e17slGjlj4+PEGGDBkHMNJhZDqwXP8rRcqQIUNG2oZ7a8C5vv4AliFDhowwaKbJZRpkH+YbMmTIGMpIt1m8m/x1Cl0ZMmScwEhLxzS81sYM5JPJkCHjAMYPmQKTYcDEJHIAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
