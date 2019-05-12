@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="Vue">
-    <meta name="description" content="provide / inject上一节中我们说到，ref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。本小节则介绍一种无依赖的组件通信方法：Vue.js 内置的 provide / inject 接口。 什么是 provide / inje">
+    <meta name="description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="递归组件与动态组件">
 <meta property="og:url" content="http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/index.html">
 <meta property="og:site_name" content="小小宋">
-<meta property="og:description" content="provide / inject上一节中我们说到，ref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。本小节则介绍一种无依赖的组件通信方法：Vue.js 内置的 provide / inject 接口。 什么是 provide / inje">
+<meta property="og:description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-12T15:22:28.145Z">
+<meta property="og:updated_time" content="2019-05-12T15:25:31.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="递归组件与动态组件">
-<meta name="twitter:description" content="provide / inject上一节中我们说到，ref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。本小节则介绍一种无依赖的组件通信方法：Vue.js 内置的 provide / inject 接口。 什么是 provide / inje">
+<meta name="twitter:description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
     
         <link rel="alternate" type="application/atom+xml" title="小小宋" href="/atom.xml">
     
@@ -188,7 +188,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide / inject"></a>provide / inject</h1><p>上一节中我们说到，<code>ref</code> 和 <code>$parent / $children</code> 在<strong>跨级</strong>通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。本小节则介绍一种无依赖的组件通信方法：Vue.js 内置的 provide / inject 接口。</p>
+            <h1 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide / inject"></a>provide / inject</h1><p><code>ref</code> 和 <code>$parent / $children</code> 在<strong>跨级</strong>通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。<br><a id="more"></a><br>本小节则介绍一种无依赖的组件通信方法：Vue.js 内置的 provide / inject 接口。</p>
 <h2 id="什么是-provide-inject"><a href="#什么是-provide-inject" class="headerlink" title="什么是 provide / inject"></a>什么是 provide / inject</h2><p><code>provide / inject</code> 是 Vue.js 2.2.0 版本后新增的 API，在文档中这样介绍 ：</p>
 <blockquote>
 <p><a href="https://cn.vuejs.org/v2/api/#provide-inject" target="_blank" rel="noopener">https://cn.vuejs.org/v2/api/#provide-inject</a></p>
@@ -251,7 +251,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-05-12T15:22:28.145Z" itemprop="dateUpdated">2019-05-12 23:22:28</time>
+    Last updated: <time datetime="2019-05-12T15:25:31.678Z" itemprop="dateUpdated">2019-05-12 23:25:31</time>
 </span><br>
 
 
@@ -297,7 +297,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -448,7 +448,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/组件的通信 1：provide   inject/&title=《递归组件与动态组件》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
