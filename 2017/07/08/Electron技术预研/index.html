@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Electron技术预研 | 小小宋</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Electron,">
+  
+
+  <meta name="description" content="Electron技术预研 Electron是一个用Html、css、JavaScript来构建跨平台桌面应用程序的开源库，包含一个主进程和若干渲染进程。">
+<meta name="keywords" content="Electron">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electron技术预研">
+<meta property="og:url" content="http://yoursite.com/2017/07/08/Electron技术预研/index.html">
+<meta property="og:site_name" content="小小宋">
+<meta property="og:description" content="Electron技术预研 Electron是一个用Html、css、JavaScript来构建跨平台桌面应用程序的开源库，包含一个主进程和若干渲染进程。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-20T06:47:54.196Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Electron技术预研">
+<meta name="twitter:description" content="Electron技术预研 Electron是一个用Html、css、JavaScript来构建跨平台桌面应用程序的开源库，包含一个主进程和若干渲染进程。">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-38189205-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+</head>
+</html>
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/tag/" rel="noopener noreferrer" target="_self">
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/link/" rel="noopener noreferrer" target="_self">
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/atom.xml" rel="noopener noreferrer" target="_blank">
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a class="CIRCLE" href="/search/" rel="noopener noreferrer" target="_self">
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Electron技术预研"><span class="toc-text">Electron技术预研</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IPC通信"><span class="toc-text">IPC通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#主进程"><span class="toc-text">主进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#渲染进程"><span class="toc-text">渲染进程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#remote模块"><span class="toc-text">remote模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#webContents"><span class="toc-text">webContents</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#渲染进程数据共享"><span class="toc-text">渲染进程数据共享</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Electron技术预研" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Electron技术预研</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.07.08</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>vf2e</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="Electron技术预研"><a href="#Electron技术预研" class="headerlink" title="Electron技术预研"></a>Electron技术预研</h1><blockquote>
+<p>Electron是一个用Html、css、JavaScript来构建跨平台桌面应用程序的开源库，包含一个主进程和若干渲染进程。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y &amp;&amp; npm i electron --save</span><br></pre></td></tr></table></figure>
+<p>新建index.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;app, BrowserWindow&#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"><span class="keyword">let</span> win</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWindow</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 创建浏览器窗口并设置宽高</span></span><br><span class="line">    win = <span class="keyword">new</span> BrowserWindow(&#123; <span class="attr">width</span>: <span class="number">800</span>, <span class="attr">height</span>: <span class="number">600</span> &#125;)</span><br><span class="line">    <span class="comment">// 加载页面</span></span><br><span class="line">    win.loadFile(<span class="string">'./index.html'</span>)    </span><br><span class="line">    <span class="comment">// 打开开发者工具</span></span><br><span class="line">    win.webContents.openDevTools()   </span><br><span class="line">    <span class="comment">// 添加window关闭触发事件</span></span><br><span class="line">    win.on(<span class="string">'closed'</span>, () =&gt; &#123;</span><br><span class="line">        win = <span class="literal">null</span>  <span class="comment">// 取消引用</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 初始化后 调用函数</span></span><br><span class="line">app.on(<span class="string">'ready'</span>, createWindow)  </span><br><span class="line"><span class="comment">// 当全部窗口关闭时退出。</span></span><br><span class="line">app.on(<span class="string">'window-all-closed'</span>, () =&gt; &#123;</span><br><span class="line">   <span class="comment">// 在 macOS 上，除非用户用 Cmd + Q 确定地退出，</span></span><br><span class="line">   <span class="comment">// 否则绝大部分应用及其菜单栏会保持激活。</span></span><br><span class="line">   <span class="keyword">if</span> (process.platform !== <span class="string">'darwin'</span>) &#123;</span><br><span class="line">        app.quit()</span><br><span class="line">   &#125;</span><br><span class="line">&#125;) </span><br><span class="line">app.on(<span class="string">'activate'</span>, () =&gt; &#123;</span><br><span class="line"><span class="comment">// 在macOS上，当单击dock图标并且没有其他窗口打开时，</span></span><br><span class="line"><span class="comment">// 通常在应用程序中重新创建一个窗口。</span></span><br><span class="line">    <span class="keyword">if</span> (win === <span class="literal">null</span>) &#123;</span><br><span class="line">      createWindow()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>新建index.html<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">      &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">      &lt;title&gt;Hello World!&lt;/title&gt;</span><br><span class="line">    &lt;<span class="regexp">/head&gt;</span></span><br><span class="line"><span class="regexp">    &lt;body&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h1 id="h1"&gt;Hello World!&lt;/</span>h1&gt;</span><br><span class="line">        We are using node</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            <span class="built_in">document</span>.write(process.versions.node)</span><br><span class="line">        &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">        Chrome</span></span><br><span class="line"><span class="regexp">        &lt;script&gt;</span></span><br><span class="line"><span class="regexp">            document.write(process.versions.chrome)</span></span><br><span class="line"><span class="regexp">        &lt;/</span>script&gt;,</span><br><span class="line">        and Electron</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            <span class="built_in">document</span>.write(process.versions.electron)</span><br><span class="line">        &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>修改packge.json中的main字段,并添加start命令<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  main:<span class="string">'index.js'</span>,</span><br><span class="line">  scripts:&#123;</span><br><span class="line">    <span class="string">"start"</span>: <span class="string">"electron ."</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>执行<code>npm run start</code>即可启动elcetron项目</p>
+<p>打开调试面板<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">win = <span class="keyword">new</span> BrowserWindow(&#123;<span class="attr">width</span>: <span class="number">800</span>, <span class="attr">height</span>: <span class="number">600</span>&#125;)</span><br><span class="line">win.webContents.openDevTools() <span class="comment">// 打开调试</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="IPC通信"><a href="#IPC通信" class="headerlink" title="IPC通信"></a>IPC通信</h2><blockquote>
+<p>主进程和渲染进程通过ipcMain和ipcRenderer两个模块实现通信（类似发布-订阅模式）。</p>
+</blockquote>
+<ul>
+<li><p>ipcMain在主进程中使用，用来处理渲染进程（网页）发送的同步和异步的信息。</p>
+</li>
+<li><p>ipcRenderer在渲染进程中使用，用来发送同步或异步的信息给主进程，也可以用来接收主进程的返回信息。</p>
+</li>
+</ul>
+<h4 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;ipcMain&#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"><span class="comment">// 监听渲染程序发来的事件</span></span><br><span class="line">ipcMain.on(<span class="string">'something'</span>, (event, data) =&gt; &#123;</span><br><span class="line">    event.sender.send(<span class="string">'something1'</span>, <span class="string">'我是主进程返回的值'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="渲染进程"><a href="#渲染进程" class="headerlink" title="渲染进程"></a>渲染进程</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; ipcRenderer&#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>) </span><br><span class="line"><span class="comment">// 发送事件给主进程</span></span><br><span class="line">ipcRenderer.send(<span class="string">'something'</span>, <span class="string">'传输给主进程的值'</span>)  </span><br><span class="line"><span class="comment">// 监听主进程发来的事件</span></span><br><span class="line">ipcRenderer.on(<span class="string">'something1'</span>, (event, data) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data) <span class="comment">// 我是主进程返回的值</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>electron也提供了同步传输的API，但是发送同步消息将会阻塞整个渲染进程，尽量避免。<br>切忌用 IPC 传递大量的数据，会有很大的性能问题（卡死）。</p>
+<h4 id="remote模块"><a href="#remote模块" class="headerlink" title="remote模块"></a>remote模块</h4><p>使用 remote 模块, 你可以调用 main 进程对象的方法, 而不必显式发送进程间消息。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; dialog &#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>).remote</span><br><span class="line">dialog.showMessageBox(&#123;<span class="attr">type</span>: <span class="string">'info'</span>, <span class="attr">message</span>: <span class="string">'在渲染进程中直接使用主进程的模块'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="webContents"><a href="#webContents" class="headerlink" title="webContents"></a>webContents</h4><p>webContents负责渲染和控制网页, 是 BrowserWindow 对象的一个属性, 我们使用send方法向渲染器进程发送异步消息。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;app, BrowserWindow&#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"><span class="keyword">let</span> win</span><br><span class="line">app.on(<span class="string">'ready'</span>, () =&gt; &#123;</span><br><span class="line">    win = <span class="keyword">new</span> BrowserWindow(&#123;<span class="attr">width</span>: <span class="number">800</span>, <span class="attr">height</span>: <span class="number">600</span>&#125;)</span><br><span class="line">    <span class="comment">// 加载页面</span></span><br><span class="line">    win.loadURL(<span class="string">'./index.html'</span>)</span><br><span class="line">    <span class="comment">// 导航完成时触发，即选项卡的旋转器将停止旋转，并指派onload事件后。</span></span><br><span class="line">    win.webContents.on(<span class="string">'did-finish-load'</span>, () =&gt; &#123;</span><br><span class="line">        <span class="comment">// 发送数据给渲染程序</span></span><br><span class="line">        win.webContents.send(<span class="string">'something'</span>, <span class="string">'主进程发送到渲染进程的数据'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;<span class="regexp">/head&gt;</span></span><br><span class="line"><span class="regexp">    &lt;body&gt;</span></span><br><span class="line"><span class="regexp">        &lt;script&gt;</span></span><br><span class="line"><span class="regexp">            require('electron').ipcRenderer.on('something', (event, message) =&gt; &#123;</span></span><br><span class="line"><span class="regexp">                console.log(message) /</span><span class="regexp">/ 主进程发送到渲染进程的数据</span></span><br><span class="line"><span class="regexp">            &#125;)</span></span><br><span class="line"><span class="regexp">        &lt;/</span>script&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="渲染进程数据共享"><a href="#渲染进程数据共享" class="headerlink" title="渲染进程数据共享"></a>渲染进程数据共享</h4><p>实现方式：本地存储或者使用electron的IPC机制。</p>
+<p>主进程<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">global.sharedObject = &#123;</span><br><span class="line">    someProperty: <span class="string">'default value'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>渲染进程</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一个页面</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">'electron'</span>).remote.getGlobal(<span class="string">'sharedObject'</span>).someProperty = <span class="string">'new value'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第二个页面</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">require</span>(<span class="string">'electron'</span>).remote.getGlobal(<span class="string">'sharedObject'</span>).someProperty)</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上四个方法均可实现主进程和渲染进程的通信。<br>使用remote模块是最简单的，在渲染进程中直接使用electron模块。</p>
+<p><a href="http://electronjs.org/docs" target="_blank" rel="noopener">Electron在线文档</a></p>
+<p>未完待续…</p>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt>
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/images/qr-alipay.png" alt>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="hide pull-left" href="/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2018/10/25/防抖与节流/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/archives/" rel="noopener noreferrer" target="_self">
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/category/" rel="noopener noreferrer" target="_self">
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/tag/" rel="noopener noreferrer" target="_self">
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/link/" rel="noopener noreferrer" target="_self">
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/about/" rel="noopener noreferrer" target="_self">
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/atom.xml" rel="noopener noreferrer" target="_blank">
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a class="CIRCLE" href="/search/" rel="noopener noreferrer" target="_self">
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+const gitalk = new Gitalk({
+  clientID: '277317290454635afa73',
+  clientSecret: '78223c859304da5e8d71bfce136d436c6ff95c37',
+  repo: 'blog-comment',
+  owner: 'forsigner',
+  // 在这里设置一下截取前50个字符串, 这是因为 github 对 label 的长度有了要求, 如果超过
+  // 50个字符串则会报错.
+  // id: location.pathname.split('/').pop().substring(0, 49),
+  id: location.pathname,
+  admin: ['forsigner'],
+  // facebook-like distraction free mode
+  distractionFreeMode: false
+})
+gitalk.render('gitalk-container')
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
