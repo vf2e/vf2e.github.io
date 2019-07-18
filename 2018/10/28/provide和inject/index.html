@@ -1,194 +1,59 @@
 <!DOCTYPE html>
 <html>
+  <!DOCTYPE html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
-    
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>provide和inject - 小小宋</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content="Vue">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="小小宋" type="application/atom+xml">
+  
 
-    
-
-    
-
-
-
-    <meta charset="utf-8">
-    
-    
-    
-    
-    <title>provide和inject | 小小宋</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#0081ff">
-    
-    
-    <meta name="keywords" content="Vue">
-    <meta name="description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
-<meta name="keywords" content="Vue">
-<meta property="og:type" content="article">
-<meta property="og:title" content="provide和inject">
-<meta property="og:url" content="http://yoursite.com/2018/10/28/provide和inject/index.html">
-<meta property="og:site_name" content="小小宋">
-<meta property="og:description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-12T15:27:39.832Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="provide和inject">
-<meta name="twitter:description" content="provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。">
-    
-        <link rel="alternate" type="application/atom+xml" title="小小宋" href="/atom.xml">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
-    <script>window.lazyScripts=[]</script>
-
-    <!-- custom head -->
-    
-
-</head>
-
-<body>
-    <div id="loading" class="active"></div>
-
-    <aside id="menu" class="hide">
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
-    </a>
-    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname">vf2e</h5>
-          <a href="mailto:wangchang528@gmail.com" title="wangchang528@gmail.com" class="mail">wangchang528@gmail.com</a>
-        </hgroup>
-      </div>
-    </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
-        
-            <li class="waves-block waves-effect">
-              <a href="/">
-                <i class="icon icon-lg icon-home"></i>
-                Home
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/archives">
-                <i class="icon icon-lg icon-archives"></i>
-                Archives
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/tags">
-                <i class="icon icon-lg icon-tags"></i>
-                Tags
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/categories">
-                <i class="icon icon-lg icon-th-list"></i>
-                Categories
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="https://github.com/vf2e" target="_blank">
-                <i class="icon icon-lg icon-github"></i>
-                Github
-              </a>
-            </li>
-        
-            <li class="waves-block waves-effect">
-              <a href="/custom">
-                <i class="icon icon-lg icon-link"></i>
-                About
-              </a>
-            </li>
-        
-      </ul>
-    </div>
+  <link rel="stylesheet" href="/css/style.css">
+</head></html>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">小小宋</a>
+    <div class="subtitle"></div>
   </div>
-</aside>
-
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">provide和inject</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
-        
-    </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
 </header>
-<header class="content-header post-header">
-
-    <div class="container fade-scale">
-        <h1 class="title">provide和inject</h1>
-        <h5 class="subtitle">
-            
-                <time datetime="2018-10-27T16:00:00.000Z" itemprop="datePublished" class="page-time">
-  2018-10-28
-</time>
-
-
-            
-        </h5>
-    </div>
-
-    
-
-
-</header>
-
-
-<div class="container body-wrap">
-    
-    <aside class="post-widget">
-        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#provide-inject"><span class="post-toc-number">1.</span> <span class="post-toc-text">provide / inject</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是-provide-inject"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是 provide / inject</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#替代-Vuex"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">替代 Vuex</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进阶技巧"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">进阶技巧</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#独立组件中使用"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">独立组件中使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结语"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">结语</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
-
-
-<article id="post-provide和inject" class="post-article article-type-post fade" itemprop="blogPost">
-
-    <div class="post-card">
-        <h1 class="post-card-title">provide和inject</h1>
-        <div class="post-meta">
-            <time class="post-time" title="2018-10-28 00:00:00" datetime="2018-10-27T16:00:00.000Z" itemprop="datePublished">2018-10-28</time>
-
-            
-
-
-            
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
-    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
-</span>
-
-
-        </div>
-        <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide / inject"></a>provide / inject</h1><p><code>ref</code> 和 <code>$parent / $children</code> 在<strong>跨级</strong>通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。<br><a id="more"></a><br>本小节则介绍一种无依赖的组件通信方法：Vue.js 内置的 provide / inject 接口。</p>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">provide和inject</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2018-10-28</span>
+  </div>
+  <div class="post-content">
+    <h1 id="provide-inject"><a href="#provide-inject" class="headerlink" title="provide / inject"></a>provide / inject</h1><p><code>ref</code> 和 <code>$parent / $children</code> 在<strong>跨级</strong>通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确定具体级别）时，以往会借助 Vuex 或 Bus 这样的解决方案，不得不引入三方库来支持。<br><a id="more"></a><br>本小节则介绍一种无依赖的组件通信方法：Vue.js 内置的 provide / inject 接口。</p>
 <h2 id="什么是-provide-inject"><a href="#什么是-provide-inject" class="headerlink" title="什么是 provide / inject"></a>什么是 provide / inject</h2><p><code>provide / inject</code> 是 Vue.js 2.2.0 版本后新增的 API，在文档中这样介绍 ：</p>
 <blockquote>
 <p><a href="https://cn.vuejs.org/v2/api/#provide-inject" target="_blank" rel="noopener">https://cn.vuejs.org/v2/api/#provide-inject</a></p>
@@ -244,298 +109,21 @@
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>如果这是你第一次听说 provide / inject 这对 API，一定觉得它太神奇了，至少笔者第一时间知晓时是这样的。它解决了独立组件间通信的问题，用好了还有出乎意料的效果。笔者在开发 <a href="https://dev.iviewui.com" target="_blank" rel="noopener">iView Developer</a> 时，全站就是使用这种方法来做全局数据的管理的，如果你有机会一个人做一个项目时，不妨试试这种方法。</p>
 <p>下一节，将介绍另一种组件间通信的方法，不同于 provide / inject 的是，它们不是 Vue.js 内置的 API。</p>
 
-        </div>
-
-        <blockquote class="post-copyright">
+  </div>
+  <div class="post-footer">
     
-    <div class="content">
-        
-<span class="post-time">
-    Last updated: <time datetime="2019-05-12T15:27:39.832Z" itemprop="dateUpdated">2019-05-12 23:27:39</time>
-</span><br>
-
-
-        
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/10/28/provide和inject/" target="_blank" rel="external">http://yoursite.com/2018/10/28/provide和inject/</a>
-        
-    </div>
-    
-    <footer>
-        <a href="http://yoursite.com">
-            <img src="/img/avatar.jpg" alt="vf2e">
-            vf2e
-        </a>
-    </footer>
-</blockquote>
-
-        
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
-</div>
-
-
-
-        <div class="post-footer">
-            
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
-
-
-            
-<div class="page-share-wrap">
+      <ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
     
 
-<div class="page-share" id="pageShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《provide和inject》 — 小小宋&url=http://yoursite.com/2018/10/28/provide和inject/&via=http://yoursite.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-
-    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
-        <i class="icon icon-share-alt icon-lg"></i>
-    </a>
-</div>
-
-
-
-        </div>
-    </div>
-
-    
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
-  
-
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2018/10/25/递归组件与动态组件/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">递归组件与动态组件</h4>
-      </a>
-    </div>
-  
-</nav>
-
-
-
-    
-
-
-<section class="comments" id="comments">
-    <div id="disqus_thread"></div>
-    <script>
-    var disqus_shortname = 'true';
-    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <a href="#top" class="top">Back to Top</a>
+  </div>
 </article>
-
-<div id="reward" class="page-modal reward-lay">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <h3 class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        谢谢大爷
-        <i class="icon icon-quote-right"></i>
-    </h3>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
-        </div>
-        
-    </div>
-</div>
-
-
-
-</div>
-
-        <footer class="footer">
-    <div class="top">
-        
-<p>
-    <span id="busuanzi_container_site_uv" style="display:none">
-        站点总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
-        站点总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
-
-
-        <p>
-            
-                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
-            
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
-        </p>
-    </div>
-    <div class="bottom">
-        <p><span>vf2e &copy; 2015 - 2019</span>
-            <span>
-                
-                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
-            </span>
-        </p>
-    </div>
+<footer>
+  &copy; 2019
+  <span class="author">
+    vf2e
+  </span>
 </footer>
-
-    </main>
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-
-<div class="global-share" id="globalShare">
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/28/provide和inject/&title=《provide和inject》 — 小小宋&source=provide / injectref 和 $parent / $children 在跨级通信时是有弊端的。当组件 A 和组件 B 中间隔了数代（甚至不确..." data-title=" QQ">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Facebook">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《provide和inject》 — 小小宋&url=http://yoursite.com/2018/10/28/provide和inject/&via=http://yoursite.com" data-title=" Twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/28/provide和inject/" data-title=" Google+">
-          <i class="icon icon-google-plus"></i>
-        </a>
-      </li>
-    </ul>
- </div>
-
-
-<div class="page-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS46EMAxFUfa/aXraUqvCfTbVUpzLCFEU5DCw/Ml14eMGx6f7f1/5e77+18uHDBkytmWQxa2vrJdF7ifvfXijDBkyDmCQRZAQmfLW7+JPkCFDhoz0nAfTzueTIUOGjPXj1kkeCcf8fhkyZMjgRSwB8LSPB/eXa3EZMmRsyOBd9/8//8p8Q4YMGVsx7vDgT6ulhsVVyZAhYzSDB7japorXWmlkPTJkyBjK4KVjupEiLYk7TT0ZMmScwKi179OgzPFpEilDhozZjHQ8wJNCMkioJaMP6aMMGTLGMUiriwc7/iFqAf3jCmXIkDGaQUrWzq/8nnRLx5W+RoYMGZszSP7IF8EDblroxtsyZMiQMYLBG17kcf0ilg8n0J4RGTJkjGCkCVnrNWGpnI4fZMiQMZWRFo1k0FgbG7QKVxkyZIxmdJbbSfVqSWGw2UKGDBnHMMhDa2POWuutmOfKkCFjcwZPwvhIgP/KA2txz4gMGTJGMDpDRJ7kkTFnfwgqQ4aM2Yxaaz4NrLVGWxCaZciQcRgjLVw7wbqfVsqQIeNMRrrxKx0V8I1iPK2UIUPGVMYdHv1W2lfacDJkyBjNqAW72tigViT3Q7wMGTJmMEiQ5e17slGjlj4+PEGGDBkHMNJhZDqwXP8rRcqQIUNG2oZ7a8C5vv4AliFDhowwaKbJZRpkH+YbMmTIGMpIt1m8m/x1Cl0ZMmScwEhLxzS81sYM5JPJkCHjAMYPmQKTYcDEJHIAAAAASUVORK5CYII=" alt="微信分享二维码">
-</div>
-
-
-
-
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
-
-
-</script>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
-
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item">
-    <a href="{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
-            </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
-</template>
-
-<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
-
-
-
-
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-<script>
-(function() {
-    var OriginTitile = document.title, titleTime;
-    document.addEventListener('visibilitychange', function() {
-        if (document.hidden) {
-            document.title = 'Page Not Found!';
-            clearTimeout(titleTime);
-        } else {
-            document.title = 'Winter Is Coming!';
-            titleTime = setTimeout(function() {
-                document.title = OriginTitile;
-            },2000);
-        }
-    });
-})();
-</script>
-
-
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+    </div>
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
