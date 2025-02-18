@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title>测试文章</title>
-    <link href="/2025/02/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    <url>/2025/02/18/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+    <title>Git报错： Failed to connect to github.com port 443 解决方案</title>
+    <link href="/2021/06/10/Git%E6%8A%A5%E9%94%99%EF%BC%9A%20Failed%20to%20connect%20to%20github.com%20port%20443%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <url>/2021/06/10/Git%E6%8A%A5%E9%94%99%EF%BC%9A%20Failed%20to%20connect%20to%20github.com%20port%20443%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h4 id="两种情况："><a href="#两种情况：" class="headerlink" title="两种情况："></a>两种情况：</h4><p><strong>第一种情况自己有vpn</strong>，网页可以打开github。说明命令行在拉取&#x2F;推送代码时并没有使用<a href="https://so.csdn.net/so/search?q=vpn&spm=1001.2101.3001.7020">vpn</a>进行代理</p><p><strong>第二种情况没有vpn</strong>，这时可以去某些网站上找一些<a href="https://so.csdn.net/so/search?q=%E4%BB%A3%E7%90%86ip&spm=1001.2101.3001.7020">代理ip</a>+port</p><h4 id=""><a href="#" class="headerlink" title=""></a></h4><p>解决办法：配置http代理Windows、Linux、Mac OS 中 git 命令相同：</p><p><strong>配置socks5代理</strong></p><pre><code class="hljs">git config --global http.proxy socks5 127.0.0.1:7890git config --global https.proxy socks5 127.0.0.1:7890</code></pre><p><strong>配置http代理</strong></p><pre><code class="hljs">git config --global http.proxy 127.0.0.1:7890git config --global https.proxy 127.0.0.1:7890</code></pre><p><strong>注意：</strong></p><p><strong>命令中的主机号</strong>（127.0.0.1）是使用的代理的主机号(自己电脑有vpn那么本机可看做访问github的代理主机)，即填入127.0.0.1即可，否则填入代理主机 ip(就是网上找的那个ip)<br><strong>命令中的端口号</strong>（7890）为代理软件(代理软件不显示端口的话，就去Windows中的代理服务器设置中查看)或代理主机的监听IP，可以从代理服务器配置中获得，否则填入网上找的那个端口port </p><p><img src="https://i-blog.csdnimg.cn/blog_migrate/95317cc8ee4be11ca79e5744ad7a1ec2.png"><br>socks5和http两种协议由使用的代理软件决定，不同软件对这两种协议的支持有差异，如果不确定可以都尝试一下<br><strong>主机号和端口号可在代理的位置查看(自己有vpn的需要查看)</strong></p><p><img src="https://i-blog.csdnimg.cn/blog_migrate/51468f9bb9698bf45f234a0f125cf292.png"></p><p><strong>查看代理命令</strong></p><pre><code class="hljs">git config --global --get http.proxygit config --global --get https.proxy</code></pre><p><strong>取消代理命令</strong></p><pre><code class="hljs">git config --global --unset http.proxygit config --global --unset https.proxy</code></pre>]]></content>
     
     
+    <categories>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>原创</tag>
+      
+    </tags>
     
   </entry>
   
