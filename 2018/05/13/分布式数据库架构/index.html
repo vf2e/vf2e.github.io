@@ -19,22 +19,24 @@
   <meta name="author" content="VF2E">
   <meta name="keywords" content="">
   
-    <meta name="description" content="QML 语法基础概述QML（Qt Meta-Object Language）是一种用于描述应用程序用户界面的声明式编程语言。它允许开发者通过定义对象及其属性来构建用户界面，并且支持动态交互和组件复用。QML 的语法简洁直观，适合快速开发复杂的用户界面。 导入语句在 QML 文档中，可以通过 import 语句导入所需的模块或文件。导入语句的通用形式如下：  导入版本化的命名空间：   1impor">
+    <meta name="description" content="分布式数据库的架构分布式数据库系统通过将数据分散存储在多个物理节点上来实现数据的全局共享和高效管理。在此过程中，它需要具备良好的架构设计，以确保数据访问的透明性、分布式管理的高效性以及系统的高可用性。本文将详细讨论分布式数据库的架构、模式结构以及与并行数据库系统的区别。  一、分布式数据库的架构模式分布式数据库系统的架构模式通常由六个层次组成，分为两大部分：下半部分是集中式数据库的模式结构，代表了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QML语法基础">
-<meta property="og:url" content="http://vf2e.github.io/2025/02/18/QML%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="分布式数据库的架构">
+<meta property="og:url" content="http://vf2e.github.io/2018/05/13/%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9E%B6%E6%9E%84/index.html">
 <meta property="og:site_name" content="舞月剑诀">
-<meta property="og:description" content="QML 语法基础概述QML（Qt Meta-Object Language）是一种用于描述应用程序用户界面的声明式编程语言。它允许开发者通过定义对象及其属性来构建用户界面，并且支持动态交互和组件复用。QML 的语法简洁直观，适合快速开发复杂的用户界面。 导入语句在 QML 文档中，可以通过 import 语句导入所需的模块或文件。导入语句的通用形式如下：  导入版本化的命名空间：   1impor">
+<meta property="og:description" content="分布式数据库的架构分布式数据库系统通过将数据分散存储在多个物理节点上来实现数据的全局共享和高效管理。在此过程中，它需要具备良好的架构设计，以确保数据访问的透明性、分布式管理的高效性以及系统的高可用性。本文将详细讨论分布式数据库的架构、模式结构以及与并行数据库系统的区别。  一、分布式数据库的架构模式分布式数据库系统的架构模式通常由六个层次组成，分为两大部分：下半部分是集中式数据库的模式结构，代表了">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-18T11:35:20.000Z">
-<meta property="article:modified_time" content="2025-02-18T08:31:51.897Z">
+<meta property="og:image" content="http://vf2e.github.io/images/3/2.png">
+<meta property="article:published_time" content="2018-05-13T08:55:03.000Z">
+<meta property="article:modified_time" content="2025-02-20T05:22:40.671Z">
 <meta property="article:author" content="VF2E">
 <meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://vf2e.github.io/images/3/2.png">
   
   
   
-  <title>QML语法基础 - 舞月剑诀</title>
+  <title>分布式数据库的架构 - 舞月剑诀</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="QML语法基础"></span>
+            <span id="subtitle" data-typed-text="分布式数据库的架构"></span>
           
         </div>
 
@@ -211,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-18 19:35" pubdate>
-          2025年2月18日 晚上
+        <time datetime="2018-05-13 16:55" pubdate>
+          2018年5月13日 下午
         </time>
       </span>
     
@@ -223,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          651 字
+          1.8k 字
         
       </span>
     
@@ -234,7 +236,7 @@
         
         
         
-          6 分钟
+          15 分钟
         
       </span>
     
@@ -271,68 +273,59 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">QML语法基础</h1>
+            <h1 id="seo-header">分布式数据库的架构</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="QML-语法基础"><a href="#QML-语法基础" class="headerlink" title="QML 语法基础"></a>QML 语法基础</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>QML（Qt Meta-Object Language）是一种用于描述应用程序用户界面的声明式编程语言。它允许开发者通过定义对象及其属性来构建用户界面，并且支持动态交互和组件复用。QML 的语法简洁直观，适合快速开发复杂的用户界面。</p>
-<h2 id="导入语句"><a href="#导入语句" class="headerlink" title="导入语句"></a>导入语句</h2><p>在 QML 文档中，可以通过 <code>import</code> 语句导入所需的模块或文件。导入语句的通用形式如下：</p>
-<ul>
-<li><p>导入版本化的命名空间：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> Namespace VersionMajor.VersionMinor<br></code></pre></td></tr></table></figure>
-<p>例如：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> QtQuick <span class="hljs-number">2.0</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>导入相对目录：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;directory&quot;</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>导入 JavaScript 文件：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;file.js&quot;</span> <span class="hljs-keyword">as</span> ScriptIdentifier<br></code></pre></td></tr></table></figure></li>
+                <h1 id="分布式数据库的架构"><a href="#分布式数据库的架构" class="headerlink" title="分布式数据库的架构"></a>分布式数据库的架构</h1><p>分布式数据库系统通过将数据分散存储在多个物理节点上来实现数据的全局共享和高效管理。在此过程中，它需要具备良好的架构设计，以确保数据访问的透明性、分布式管理的高效性以及系统的高可用性。本文将详细讨论分布式数据库的架构、模式结构以及与并行数据库系统的区别。</p>
+<p><img src="/images/3/2.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="一、分布式数据库的架构模式"><a href="#一、分布式数据库的架构模式" class="headerlink" title="一、分布式数据库的架构模式"></a>一、分布式数据库的架构模式</h2><p>分布式数据库系统的架构模式通常由六个层次组成，分为两大部分：下半部分是集中式数据库的模式结构，代表了局部数据库的基本结构；上半部分是分布式数据库系统增加的模式级别。以下是这六个层次的具体分析：</p>
+<h3 id="1-全局外模式（Global-External-Schema）"><a href="#1-全局外模式（Global-External-Schema）" class="headerlink" title="1. 全局外模式（Global External Schema）"></a>1. <strong>全局外模式（Global External Schema）</strong></h3><p>全局外模式是全局应用的用户视图，表示对整个分布式数据库的高层次访问。它是全局概念模式的子集，提供了特定用户需要的数据视图。</p>
+<h3 id="2-全局概念模式（Global-Conceptual-Schema）"><a href="#2-全局概念模式（Global-Conceptual-Schema）" class="headerlink" title="2. 全局概念模式（Global Conceptual Schema）"></a>2. <strong>全局概念模式（Global Conceptual Schema）</strong></h3><p>全局概念模式定义了分布式数据库中数据的整体逻辑结构。数据在全局层面被视为一个单一的实体，根本上没有分布的概念。这一层通常采用关系模型，定义了全局数据库中的关系数据。</p>
+<h3 id="3-分片模式（Fragmentation-Schema）"><a href="#3-分片模式（Fragmentation-Schema）" class="headerlink" title="3. 分片模式（Fragmentation Schema）"></a>3. <strong>分片模式（Fragmentation Schema）</strong></h3><p>分片模式涉及到全局数据的物理划分。每个全局关系被划分为若干个不重叠的片段（数据分片）。分片模式定义了如何将全局关系映射到这些片段上，这种映射是一对多的，即一个全局关系可能对应多个分片。</p>
+<h3 id="4-分布模式（Distribution-Schema）"><a href="#4-分布模式（Distribution-Schema）" class="headerlink" title="4. 分布模式（Distribution Schema）"></a>4. <strong>分布模式（Distribution Schema）</strong></h3><p>分布模式将分片映射到物理节点上，每个数据片段存储在一个或多个结点上。此层次定义了数据片段的存储结点和数据分布策略。分布模式决定了数据的冗余性——如果一个片段存储在多个节点上，则是冗余的分布数据库，反之则为非冗余。</p>
+<h3 id="5-局部概念模式（Local-Conceptual-Schema）"><a href="#5-局部概念模式（Local-Conceptual-Schema）" class="headerlink" title="5. 局部概念模式（Local Conceptual Schema）"></a>5. <strong>局部概念模式（Local Conceptual Schema）</strong></h3><p>局部概念模式描述了各个场地（物理节点）上的数据结构。它包含了分布在同一场地的所有全局概念模式的数据映像。局部概念模式与场地相关，它定义了数据的逻辑结构，确保分布式系统中的数据保持一致性。</p>
+<h3 id="6-局部内模式（Local-Internal-Schema）"><a href="#6-局部内模式（Local-Internal-Schema）" class="headerlink" title="6. 局部内模式（Local Internal Schema）"></a>6. <strong>局部内模式（Local Internal Schema）</strong></h3><p>局部内模式与物理数据库的实现相关，描述了数据在本地存储的具体细节，包括存储结构和数据访问方法。类似于集中式数据库中的内模式，但它还包括全局数据在本地的存储信息。</p>
+<h3 id="6层模式的架构优势："><a href="#6层模式的架构优势：" class="headerlink" title="6层模式的架构优势："></a>6层模式的架构优势：</h3><ul>
+<li><strong>数据分片与数据分配概念的分离</strong>，使得系统在管理数据分布时更加灵活。</li>
+<li><strong>显示控制数据冗余</strong>，数据分配情况在分布模式中清晰可见，便于系统的管理和优化。</li>
+<li><strong>局部DBMS的独立性</strong>，局部场地可以独立工作，避免了对全局数据库系统的过度依赖。</li>
 </ul>
-<h2 id="对象声明"><a href="#对象声明" class="headerlink" title="对象声明"></a>对象声明</h2><p>QML 中的对象声明用于定义对象及其属性。每个对象声明包含以下部分：</p>
-<ol>
-<li><strong>对象类型的名称</strong>：例如 <code>Rectangle</code>。</li>
-<li><strong>花括号 <code>&#123;&#125;</code></strong>：用于包裹对象的属性和子对象。</li>
-<li><strong>属性和子对象</strong>：在花括号中定义。</li>
-</ol>
-<p>示例：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Rectangle</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span><br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-string">&quot;green&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>上述代码定义了一个 <code>Rectangle</code> 对象，并设置了其宽度、高度和颜色属性。</p>
-<h3 id="单行声明"><a href="#单行声明" class="headerlink" title="单行声明"></a>单行声明</h3><p>如果对象属性较少，可以将所有属性写在一行中，用分号分隔：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Rectangle</span> &#123; <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span>; <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span>; <span class="hljs-attribute">color</span>: <span class="hljs-string">&quot;green&quot;</span> &#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><p>QML 支持通过嵌套对象声明来定义子对象。这种方式可以构建复杂的对象树结构。</p>
-<p>示例：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Rectangle</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span><br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-string">&quot;green&quot;</span><br><br>    <span class="hljs-title">Text</span> &#123;<br>        <span class="hljs-attribute">anchors.centerIn</span>: <span class="hljs-built_in">parent</span><br>        <span class="hljs-attribute">text</span>: <span class="hljs-string">&quot;Hello, QML!&quot;</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>Text</code> 对象是 <code>Rectangle</code> 对象的子对象，并且通过 <code>anchors.centerIn</code> 属性将其居中显示。</p>
-<h3 id="父子关系"><a href="#父子关系" class="headerlink" title="父子关系"></a>父子关系</h3><p>QML 中的父子关系有两种：</p>
-<ol>
-<li><strong>对象树中的父子关系</strong>：通过嵌套对象声明定义。</li>
-<li><strong>视觉场景中的父子关系</strong>：由 <code>Item</code> 类型提供，用于控制可视化元素的层次结构。</li>
-</ol>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>QML 的注释语法与 JavaScript 类似：</p>
-<ul>
-<li><strong>单行注释</strong>：以 <code>//</code> 开头。</li>
-<li><strong>多行注释</strong>：以 <code>/*</code> 开头，以 <code>*/</code> 结尾。</li>
+<h2 id="二、分布式数据库与并行数据库的区别"><a href="#二、分布式数据库与并行数据库的区别" class="headerlink" title="二、分布式数据库与并行数据库的区别"></a>二、分布式数据库与并行数据库的区别</h2><p>分布式数据库系统与并行数据库系统虽然在网络架构上相似，但它们的目标、实现方式和节点角色有显著区别：</p>
+<h3 id="1-应用目标不同"><a href="#1-应用目标不同" class="headerlink" title="1. 应用目标不同"></a>1. <strong>应用目标不同</strong></h3><ul>
+<li><strong>并行数据库系统</strong>的目标是通过并行计算资源提升数据库的性能，充分利用各节点的计算能力。</li>
+<li><strong>分布式数据库系统</strong>主要关注数据的全局共享和场地自治，目的是确保数据在多个地点的透明访问和管理。</li>
 </ul>
-<p>示例：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Text</span> &#123;<br>    <span class="hljs-attribute">text</span>: <span class="hljs-string">&quot;Hello QML!&quot;</span>  <span class="hljs-comment">// 单行注释</span><br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">        多行注释</span><br><span class="hljs-comment">        用于解释复杂的代码逻辑</span><br><span class="hljs-comment">    */</span><br>    <span class="hljs-attribute">font.family</span>: <span class="hljs-string">&quot;Helvetica&quot;</span><br>    <span class="hljs-attribute">font.pointSize</span>: <span class="hljs-number">24</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>注释的作用包括：</p>
-<ul>
-<li>提高代码的可读性。</li>
-<li>临时禁用代码以调试问题。</li>
+<h3 id="2-实现方式不同"><a href="#2-实现方式不同" class="headerlink" title="2. 实现方式不同"></a>2. <strong>实现方式不同</strong></h3><ul>
+<li>在并行数据库系统中，节点之间通过高速通信网络互联，数据传输代价较低，支持负载均衡，确保高效处理大规模任务。</li>
+<li>在分布式数据库系统中，各节点通过局域网或广域网连接，网络带宽较低，因此数据传输开销较大。此时，查询处理需尽量减少节点间的数据交换。</li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>QML 是一种强大的声明式语言，适合快速构建用户界面。通过导入模块、声明对象及其属性，开发者可以轻松创建复杂的 UI 结构。QML 的语法简洁直观，结合注释的使用，能够显著提高代码的可维护性和可读性。</p>
-<hr>
-<p><strong>参考链接</strong>：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://doc.qt.io/qt-5/qml-tutorial.html">QML 官方文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://doc.qt.io/qt-5/qtquick-index.html">Qt Quick 入门指南</a></li>
+<h3 id="3-各节点的角色不同"><a href="#3-各节点的角色不同" class="headerlink" title="3. 各节点的角色不同"></a>3. <strong>各节点的角色不同</strong></h3><ul>
+<li><strong>并行数据库</strong>的所有节点在逻辑上是对等的，它们共同协作处理数据。</li>
+<li><strong>分布式数据库</strong>中的节点既协同处理全局事务，也保有自己的自治性，除了执行全局事务外，它们也负责局部事务的处理和管理。</li>
 </ul>
+<h2 id="三、数据分片与透明性"><a href="#三、数据分片与透明性" class="headerlink" title="三、数据分片与透明性"></a>三、数据分片与透明性</h2><h3 id="1-数据分片"><a href="#1-数据分片" class="headerlink" title="1. 数据分片"></a>1. <strong>数据分片</strong></h3><p>数据分片是分布式数据库系统中的核心概念之一。数据分片使得数据的存储单位变为数据片段，而非一个整体关系。这种划分有助于根据用户需求灵活分配数据存储，同时控制数据冗余度。分片方式主要包括：</p>
+<ul>
+<li><strong>水平分片</strong>：根据行来划分数据。</li>
+<li><strong>垂直分片</strong>：根据列来划分数据。</li>
+<li><strong>混合分片</strong>：结合水平和垂直分片策略。</li>
+<li><strong>导出分片</strong>：根据外部条件进行分片。</li>
+</ul>
+<h3 id="2-分布透明性"><a href="#2-分布透明性" class="headerlink" title="2. 分布透明性"></a>2. <strong>分布透明性</strong></h3><p>分布透明性是指用户或应用程序无需关心数据的物理存储位置和数据如何分片。它可以分为以下几个层次：</p>
+<ul>
+<li><strong>分片透明性</strong>：用户操作时无需考虑数据的分片，系统自动管理分片的映射。</li>
+<li><strong>位置透明性</strong>：用户不需要关心数据片段的存储位置，系统会自动处理。</li>
+<li><strong>局部数据模型透明性</strong>：用户无需关心数据所在的局部数据库使用的具体数据模型。</li>
+</ul>
+<h2 id="四、分布式数据库管理系统（DDBMS）"><a href="#四、分布式数据库管理系统（DDBMS）" class="headerlink" title="四、分布式数据库管理系统（DDBMS）"></a>四、分布式数据库管理系统（DDBMS）</h2><p>分布式数据库管理系统的任务是将用户与分布式数据库隔离，使得用户能够像访问集中式数据库一样访问分布式数据库。虽然物理实现与集中式数据库不同，但在逻辑上，DDBMS为用户提供了一个统一、透明的访问接口。分布式数据库管理系统需解决以下任务：</p>
+<ul>
+<li>数据分片与分配</li>
+<li>数据冗余管理</li>
+<li>查询优化与负载均衡</li>
+<li>事务管理与一致性维护</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>分布式数据库的架构通过分层模式确保了数据的透明性、冗余管理和局部自治。这使得系统能够有效管理分布在多个节点上的大规模数据，保证高效的查询处理和数据一致性。虽然分布式数据库与并行数据库在某些方面相似，但其目标、实现方式以及节点角色的不同使得它们各自具有独特的优势和适用场景。</p>
 
                 
               </div>
@@ -351,7 +344,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/QML/" class="category-chain-item">QML</a>
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
   
   
 
@@ -378,8 +371,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>QML语法基础</div>
-      <div>http://vf2e.github.io/2025/02/18/QML语法基础/</div>
+      <div>分布式数据库的架构</div>
+      <div>http://vf2e.github.io/2018/05/13/分布式数据库架构/</div>
     </div>
     <div class="license-meta">
       
@@ -391,7 +384,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年2月18日</div>
+          <div>2018年5月13日</div>
         </div>
       
       
@@ -423,11 +416,17 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2025/02/18/QML%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" title="QML语法基础">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">QML语法基础</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2018/05/13/%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9E%B6%E6%9E%84/" title="分布式数据库的架构">
+                      <a href="/2018/05/11/%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A6%82%E5%BF%B5/" title="分布式数据库的架构">
                         <span class="hidden-mobile">分布式数据库的架构</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
