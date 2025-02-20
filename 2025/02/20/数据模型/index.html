@@ -19,22 +19,21 @@
   <meta name="author" content="VF2E">
   <meta name="keywords" content="">
   
-    <meta name="description" content="QML 语法基础概述QML（Qt Meta-Object Language）是一种用于描述应用程序用户界面的声明式编程语言。它允许开发者通过定义对象及其属性来构建用户界面，并且支持动态交互和组件复用。QML 的语法简洁直观，适合快速开发复杂的用户界面。 导入语句在 QML 文档中，可以通过 import 语句导入所需的模块或文件。导入语句的通用形式如下：  导入版本化的命名空间：   1impor">
+    <meta name="description" content="数据模型1.概念数据模型概念数据模型是从用户视角出发，用来描述信息结构和数据关系，通常用于数据库设计阶段。它主要通过**实体—联系模型（Entity-Relationship Model，简称E-R模型）**来表示。E-R模型通过实体（Entity）、属性（Attribute）和实体间的联系（Relationship）来描述现实世界的数据和信息。这种模型通常在开发初期阶段使用，可以帮助设计者清晰地">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QML语法基础">
-<meta property="og:url" content="http://vf2e.github.io/2025/02/18/QML%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="舞月剑诀">
+<meta property="og:url" content="http://vf2e.github.io/2025/02/20/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="舞月剑诀">
-<meta property="og:description" content="QML 语法基础概述QML（Qt Meta-Object Language）是一种用于描述应用程序用户界面的声明式编程语言。它允许开发者通过定义对象及其属性来构建用户界面，并且支持动态交互和组件复用。QML 的语法简洁直观，适合快速开发复杂的用户界面。 导入语句在 QML 文档中，可以通过 import 语句导入所需的模块或文件。导入语句的通用形式如下：  导入版本化的命名空间：   1impor">
+<meta property="og:description" content="数据模型1.概念数据模型概念数据模型是从用户视角出发，用来描述信息结构和数据关系，通常用于数据库设计阶段。它主要通过**实体—联系模型（Entity-Relationship Model，简称E-R模型）**来表示。E-R模型通过实体（Entity）、属性（Attribute）和实体间的联系（Relationship）来描述现实世界的数据和信息。这种模型通常在开发初期阶段使用，可以帮助设计者清晰地">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-18T11:35:20.000Z">
-<meta property="article:modified_time" content="2025-02-18T08:31:51.897Z">
+<meta property="article:published_time" content="2025-02-20T02:53:48.850Z">
+<meta property="article:modified_time" content="2025-02-20T03:04:43.989Z">
 <meta property="article:author" content="VF2E">
-<meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>QML语法基础 - 舞月剑诀</title>
+  <title>舞月剑诀</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="QML语法基础"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-18 19:35" pubdate>
-          2025年2月18日 晚上
+        <time datetime="2025-02-20 10:53" pubdate>
+          2025年2月20日 上午
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          651 字
+          1.6k 字
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          6 分钟
+          14 分钟
         
       </span>
     
@@ -271,68 +270,90 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">QML语法基础</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="QML-语法基础"><a href="#QML-语法基础" class="headerlink" title="QML 语法基础"></a>QML 语法基础</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>QML（Qt Meta-Object Language）是一种用于描述应用程序用户界面的声明式编程语言。它允许开发者通过定义对象及其属性来构建用户界面，并且支持动态交互和组件复用。QML 的语法简洁直观，适合快速开发复杂的用户界面。</p>
-<h2 id="导入语句"><a href="#导入语句" class="headerlink" title="导入语句"></a>导入语句</h2><p>在 QML 文档中，可以通过 <code>import</code> 语句导入所需的模块或文件。导入语句的通用形式如下：</p>
+                <h1 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h1><h2 id="1-概念数据模型"><a href="#1-概念数据模型" class="headerlink" title="1.概念数据模型"></a>1.概念数据模型</h2><p>概念数据模型是从用户视角出发，用来描述信息结构和数据关系，通常用于数据库设计阶段。它主要通过**实体—联系模型（Entity-Relationship Model，简称E-R模型）**来表示。E-R模型通过实体（Entity）、属性（Attribute）和实体间的联系（Relationship）来描述现实世界的数据和信息。这种模型通常在开发初期阶段使用，可以帮助设计者清晰地理解和构建数据库的结构。</p>
 <ul>
-<li><p>导入版本化的命名空间：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> Namespace VersionMajor.VersionMinor<br></code></pre></td></tr></table></figure>
-<p>例如：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> QtQuick <span class="hljs-number">2.0</span><br></code></pre></td></tr></table></figure>
+<li><strong>实体（Entity）</strong>：是具有独立存在意义的事物，通常是数据库中的一个表格。例如，学生、教师、书籍等。</li>
+<li><strong>属性（Attribute）</strong>：是对实体的具体描述或特征。比如学生实体可能有姓名、学号、出生日期等属性。</li>
+<li><strong>联系（Relationship）</strong>：实体之间的相互关联。例如，学生与课程之间的“选修”关系，或者教师与学生之间的“授课”关系。</li>
+</ul>
+<p>E-R模型为数据库设计提供了一个高层次的抽象，能够帮助开发人员以图形化的方式直观地表示数据结构及其关系。</p>
+<h2 id="2-基本数据模型"><a href="#2-基本数据模型" class="headerlink" title="2.基本数据模型"></a>2.基本数据模型</h2><p>基本数据模型是根据计算机系统的需求对数据进行建模，主要用于数据库管理系统（DBMS）的实现。它们侧重于数据的存储方式、操作方式以及数据完整性，通常由<strong>数据结构、数据操作和完整性约束</strong>三部分组成。</p>
+<ul>
+<li><strong>数据结构</strong>：描述数据库的静态特征，包括数据的组织方式、存储格式等。</li>
+<li><strong>数据操作</strong>：定义如何对数据进行操作（如查询、插入、更新、删除等），以及数据操作的规则。</li>
+<li><strong>完整性约束</strong>：确保数据的准确性和一致性。比如，某些字段的值必须唯一，或某些字段的值必须符合特定的格式等。</li>
+</ul>
+<p>常见的基本数据模型包括层次模型、网状模型、关系模型和面向对象模型。</p>
+<h3 id="2-1-层次模型"><a href="#2-1-层次模型" class="headerlink" title="2.1 层次模型"></a>2.1 层次模型</h3><p>层次模型用树形结构表示实体类型及实体间的联系，实体间的联系通常通过父子关系来表示。层次模型的优点是数据的存取路径是显式的，因此查询效率较高，尤其在查询简单、树形结构明显的数据时。</p>
+<ul>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li>数据组织通过层次结构进行，关系清晰，查询效率高。</li>
+<li>对于某些类型的应用（如组织结构、目录树等）特别适合。</li>
+</ul>
 </li>
-<li><p>导入相对目录：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;directory&quot;</span><br></code></pre></td></tr></table></figure>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li><strong>只能表示1:n联系</strong>，如果需要表示m:n联系，通常需要一些复杂的设计手段，这使得模型不够灵活。</li>
+<li>查询和更新操作较为复杂，尤其当数据的层次结构发生变化时，应用程序的修改比较困难。</li>
+<li>在实际应用中，系统的扩展性较差。</li>
+</ul>
 </li>
-<li><p>导入 JavaScript 文件：  </p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;file.js&quot;</span> <span class="hljs-keyword">as</span> ScriptIdentifier<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="对象声明"><a href="#对象声明" class="headerlink" title="对象声明"></a>对象声明</h2><p>QML 中的对象声明用于定义对象及其属性。每个对象声明包含以下部分：</p>
-<ol>
-<li><strong>对象类型的名称</strong>：例如 <code>Rectangle</code>。</li>
-<li><strong>花括号 <code>&#123;&#125;</code></strong>：用于包裹对象的属性和子对象。</li>
-<li><strong>属性和子对象</strong>：在花括号中定义。</li>
-</ol>
-<p>示例：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Rectangle</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span><br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-string">&quot;green&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>上述代码定义了一个 <code>Rectangle</code> 对象，并设置了其宽度、高度和颜色属性。</p>
-<h3 id="单行声明"><a href="#单行声明" class="headerlink" title="单行声明"></a>单行声明</h3><p>如果对象属性较少，可以将所有属性写在一行中，用分号分隔：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Rectangle</span> &#123; <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span>; <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span>; <span class="hljs-attribute">color</span>: <span class="hljs-string">&quot;green&quot;</span> &#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><p>QML 支持通过嵌套对象声明来定义子对象。这种方式可以构建复杂的对象树结构。</p>
-<p>示例：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Rectangle</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">300</span><br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">200</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-string">&quot;green&quot;</span><br><br>    <span class="hljs-title">Text</span> &#123;<br>        <span class="hljs-attribute">anchors.centerIn</span>: <span class="hljs-built_in">parent</span><br>        <span class="hljs-attribute">text</span>: <span class="hljs-string">&quot;Hello, QML!&quot;</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>Text</code> 对象是 <code>Rectangle</code> 对象的子对象，并且通过 <code>anchors.centerIn</code> 属性将其居中显示。</p>
-<h3 id="父子关系"><a href="#父子关系" class="headerlink" title="父子关系"></a>父子关系</h3><p>QML 中的父子关系有两种：</p>
-<ol>
-<li><strong>对象树中的父子关系</strong>：通过嵌套对象声明定义。</li>
-<li><strong>视觉场景中的父子关系</strong>：由 <code>Item</code> 类型提供，用于控制可视化元素的层次结构。</li>
-</ol>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>QML 的注释语法与 JavaScript 类似：</p>
+<h3 id="2-2-网状模型"><a href="#2-2-网状模型" class="headerlink" title="2.2 网状模型"></a>2.2 网状模型</h3><p>网状模型使用有向图表示实体类型及实体间的联系，其中每条边代表实体间的联系。网状模型的一个显著特点是支持m:n类型的关系，这使得它比层次模型更为灵活。</p>
 <ul>
-<li><strong>单行注释</strong>：以 <code>//</code> 开头。</li>
-<li><strong>多行注释</strong>：以 <code>/*</code> 开头，以 <code>*/</code> 结尾。</li>
-</ul>
-<p>示例：</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-title">Text</span> &#123;<br>    <span class="hljs-attribute">text</span>: <span class="hljs-string">&quot;Hello QML!&quot;</span>  <span class="hljs-comment">// 单行注释</span><br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">        多行注释</span><br><span class="hljs-comment">        用于解释复杂的代码逻辑</span><br><span class="hljs-comment">    */</span><br>    <span class="hljs-attribute">font.family</span>: <span class="hljs-string">&quot;Helvetica&quot;</span><br>    <span class="hljs-attribute">font.pointSize</span>: <span class="hljs-number">24</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>注释的作用包括：</p>
+<li><p><strong>优点</strong>：</p>
 <ul>
-<li>提高代码的可读性。</li>
-<li>临时禁用代码以调试问题。</li>
+<li>支持1:n和m:n的联系，结构更为灵活，能够表达复杂的关系。</li>
+<li>查询效率较高，适用于复杂的多对多关系数据。</li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>QML 是一种强大的声明式语言，适合快速构建用户界面。通过导入模块、声明对象及其属性，开发者可以轻松创建复杂的 UI 结构。QML 的语法简洁直观，结合注释的使用，能够显著提高代码的可维护性和可读性。</p>
-<hr>
-<p><strong>参考链接</strong>：</p>
+</li>
+<li><p><strong>缺点</strong>：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://doc.qt.io/qt-5/qml-tutorial.html">QML 官方文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://doc.qt.io/qt-5/qtquick-index.html">Qt Quick 入门指南</a></li>
+<li>编写应用程序比较复杂，需要开发者理解底层的逻辑结构。</li>
+<li>系统的管理和维护较为繁琐，特别是在数据模型变化时，可能需要对应用程序做出较大的调整。</li>
 </ul>
+</li>
+</ul>
+<h3 id="2-3-关系模型"><a href="#2-3-关系模型" class="headerlink" title="2.3 关系模型"></a>2.3 关系模型</h3><p>关系模型是目前最广泛使用的数据模型，它用表格结构来表示数据，每个表代表一个实体类型。表中的列（字段）表示实体的属性，而表与表之间的联系则通过<strong>外键</strong>来表示。关系模型的核心概念基于集合理论，数据通过关系（表）来组织。</p>
+<ul>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li><strong>数学基础严谨</strong>：关系模型建立在集合理论和关系代数的基础上，具有强大的理论支持。</li>
+<li><strong>结构简单、清晰</strong>：数据库的设计与使用都非常直观，用户容易理解。数据表由行和列组成，列表示属性，行表示数据记录。</li>
+<li><strong>数据独立性</strong>：用户和应用程序不需要了解数据的物理存储方式，可以通过SQL进行操作，简化了开发过程。</li>
+<li><strong>易于维护和扩展</strong>：数据结构的变化对应用程序影响较小，数据库设计的灵活性较高。</li>
+<li><strong>良好的查询能力</strong>：关系模型通过SQL语言提供丰富的数据操作能力，方便用户查询、修改和管理数据。</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li>对于一些复杂的、层次化的关系，可能需要额外的技巧来设计数据模型。</li>
+<li>在大规模、高并发的应用场景下，可能需要优化索引和查询策略，以确保性能。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-面向对象模型"><a href="#2-4-面向对象模型" class="headerlink" title="2.4 面向对象模型"></a>2.4 面向对象模型</h3><p>面向对象模型将数据库设计与面向对象编程相结合，用<strong>对象</strong>（包括数据和方法）来表示实体。这种模型不仅能存储数据，还能表示行为，适用于一些复杂的数据和行为的关系。</p>
+<ul>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li>支持多态、继承、封装等面向对象的特性，能够更自然地表达复杂的关系。</li>
+<li>适用于复杂应用，尤其是在需要处理复杂数据结构和行为时。</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li>相比关系模型，面向对象模型的学习曲线较陡峭，开发和维护更加复杂。</li>
+<li>不如关系模型在大规模数据查询和管理方面高效，尤其是在数据库中的数据结构变化较大的时候。</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>不同的数据模型各自有其优缺点，选择合适的模型取决于具体的应用场景和需求。在数据库设计和开发过程中，<strong>概念数据模型</strong>帮助我们理解数据和关系的结构，而<strong>基本数据模型</strong>则更注重数据存储和操作的具体实现。</p>
 
                 
               </div>
@@ -341,34 +362,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/QML/" class="category-chain-item">QML</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E5%8E%9F%E5%88%9B/" class="print-no-link">#原创</a>
-      
-    </div>
   
 </div>
 
@@ -378,8 +371,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>QML语法基础</div>
-      <div>http://vf2e.github.io/2025/02/18/QML语法基础/</div>
+      <div></div>
+      <div>http://vf2e.github.io/2025/02/20/数据模型/</div>
     </div>
     <div class="license-meta">
       
@@ -391,7 +384,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年2月18日</div>
+          <div>2025年2月20日</div>
         </div>
       
       
@@ -423,7 +416,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/02/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A8%A1%E5%BC%8F/" title="">
+                      <a href="/2025/02/20/%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9E%B6%E6%9E%84/" title="">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
@@ -433,8 +426,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2016/06/10/Git%E6%8A%A5%E9%94%99%EF%BC%9A%20Failed%20to%20connect%20to%20github.com%20port%20443%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Git报错： Failed to connect to github.com port 443 解决方案">
-                        <span class="hidden-mobile">Git报错： Failed to connect to github.com port 443 解决方案</span>
+                      <a href="/2025/02/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A8%A1%E5%BC%8F/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
