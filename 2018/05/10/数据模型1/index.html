@@ -19,22 +19,22 @@
   <meta name="author" content="VF2E">
   <meta name="keywords" content="">
   
-    <meta name="description" content="第一种情况自己有vpn，网页可以打开github。说明命令行在拉取&#x2F;推送代码时并没有使用vpn进行代理 第二种情况没有vpn，这时可以去某些网站上找一些代理ip+port 解决办法：配置http代理Windows、Linux、Mac OS 中 git 命令相同： 配置socks5代理 git config --global http.proxy socks5 127.0.0.1:7890">
+    <meta name="description" content="数据模型1.概念数据模型概念数据模型是从用户视角出发，用来描述信息结构和数据关系，通常用于数据库设计阶段。它主要通过**实体—联系模型（Entity-Relationship Model，简称E-R模型）**来表示。E-R模型通过实体（Entity）、属性（Attribute）和实体间的联系（Relationship）来描述现实世界的数据和信息。这种模型通常在开发初期阶段使用，可以帮助设计者清晰地">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git报错： Failed to connect to github.com port 443 解决方案">
-<meta property="og:url" content="http://vf2e.github.io/2016/06/10/Git%E6%8A%A5%E9%94%99%EF%BC%9A%20Failed%20to%20connect%20to%20github.com%20port%20443%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:title" content="数据模型">
+<meta property="og:url" content="http://vf2e.github.io/2018/05/10/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B1/index.html">
 <meta property="og:site_name" content="舞月剑诀">
-<meta property="og:description" content="第一种情况自己有vpn，网页可以打开github。说明命令行在拉取&#x2F;推送代码时并没有使用vpn进行代理 第二种情况没有vpn，这时可以去某些网站上找一些代理ip+port 解决办法：配置http代理Windows、Linux、Mac OS 中 git 命令相同： 配置socks5代理 git config --global http.proxy socks5 127.0.0.1:7890">
+<meta property="og:description" content="数据模型1.概念数据模型概念数据模型是从用户视角出发，用来描述信息结构和数据关系，通常用于数据库设计阶段。它主要通过**实体—联系模型（Entity-Relationship Model，简称E-R模型）**来表示。E-R模型通过实体（Entity）、属性（Attribute）和实体间的联系（Relationship）来描述现实世界的数据和信息。这种模型通常在开发初期阶段使用，可以帮助设计者清晰地">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2016-06-10T08:35:20.000Z">
-<meta property="article:modified_time" content="2025-02-19T06:04:56.115Z">
+<meta property="article:published_time" content="2018-05-10T04:25:12.000Z">
+<meta property="article:modified_time" content="2025-02-20T05:21:38.765Z">
 <meta property="article:author" content="VF2E">
 <meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Git报错： Failed to connect to github.com port 443 解决方案 - 舞月剑诀</title>
+  <title>数据模型 - 舞月剑诀</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Git报错： Failed to connect to github.com port 443 解决方案"></span>
+            <span id="subtitle" data-typed-text="数据模型"></span>
           
         </div>
 
@@ -211,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2016-06-10 16:35" pubdate>
-          2016年6月10日 下午
+        <time datetime="2018-05-10 12:25" pubdate>
+          2018年5月10日 中午
         </time>
       </span>
     
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          350 字
+          1.6k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          3 分钟
+          14 分钟
         
       </span>
     
@@ -271,33 +271,90 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Git报错： Failed to connect to github.com port 443 解决方案</h1>
+            <h1 id="seo-header">数据模型</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong>第一种情况自己有vpn</strong>，网页可以打开github。说明命令行在拉取&#x2F;推送代码时并没有使用<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=vpn&spm=1001.2101.3001.7020">vpn</a>进行代理</p>
-<p><strong>第二种情况没有vpn</strong>，这时可以去某些网站上找一些<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E4%BB%A3%E7%90%86ip&spm=1001.2101.3001.7020">代理ip</a>+port</p>
-<p>解决办法：配置http代理Windows、Linux、Mac OS 中 git 命令相同：</p>
-<p><strong>配置socks5代理</strong></p>
-<pre><code class="hljs">git config --global http.proxy socks5 127.0.0.1:7890
-git config --global https.proxy socks5 127.0.0.1:7890
-</code></pre>
-<p><strong>配置http代理</strong></p>
-<pre><code class="hljs">git config --global http.proxy 127.0.0.1:7890
-git config --global https.proxy 127.0.0.1:7890
-</code></pre>
-<p><strong>注意：</strong></p>
-<p><strong>命令中的主机号</strong>（127.0.0.1）是使用的代理的主机号(自己电脑有vpn那么本机可看做访问github的代理主机)，即填入127.0.0.1即可，否则填入代理主机 ip(就是网上找的那个ip)<br><strong>命令中的端口号</strong>（7890）为代理软件(代理软件不显示端口的话，就去Windows中的代理服务器设置中查看)或代理主机的监听IP，可以从代理服务器配置中获得，否则填入网上找的那个端口port </p>
-<p>socks5和http两种协议由使用的代理软件决定，不同软件对这两种协议的支持有差异，如果不确定可以都尝试一下<br><strong>主机号和端口号可在代理的位置查看(自己有vpn的需要查看)</strong></p>
-<p><strong>查看代理命令</strong></p>
-<pre><code class="hljs">git config --global --get http.proxy
-git config --global --get https.proxy
-</code></pre>
-<p><strong>取消代理命令</strong></p>
-<pre><code class="hljs">git config --global --unset http.proxy
-git config --global --unset https.proxy
-</code></pre>
+                <h1 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h1><h2 id="1-概念数据模型"><a href="#1-概念数据模型" class="headerlink" title="1.概念数据模型"></a>1.概念数据模型</h2><p>概念数据模型是从用户视角出发，用来描述信息结构和数据关系，通常用于数据库设计阶段。它主要通过**实体—联系模型（Entity-Relationship Model，简称E-R模型）**来表示。E-R模型通过实体（Entity）、属性（Attribute）和实体间的联系（Relationship）来描述现实世界的数据和信息。这种模型通常在开发初期阶段使用，可以帮助设计者清晰地理解和构建数据库的结构。</p>
+<ul>
+<li><strong>实体（Entity）</strong>：是具有独立存在意义的事物，通常是数据库中的一个表格。例如，学生、教师、书籍等。</li>
+<li><strong>属性（Attribute）</strong>：是对实体的具体描述或特征。比如学生实体可能有姓名、学号、出生日期等属性。</li>
+<li><strong>联系（Relationship）</strong>：实体之间的相互关联。例如，学生与课程之间的“选修”关系，或者教师与学生之间的“授课”关系。</li>
+</ul>
+<p>E-R模型为数据库设计提供了一个高层次的抽象，能够帮助开发人员以图形化的方式直观地表示数据结构及其关系。</p>
+<h2 id="2-基本数据模型"><a href="#2-基本数据模型" class="headerlink" title="2.基本数据模型"></a>2.基本数据模型</h2><p>基本数据模型是根据计算机系统的需求对数据进行建模，主要用于数据库管理系统（DBMS）的实现。它们侧重于数据的存储方式、操作方式以及数据完整性，通常由<strong>数据结构、数据操作和完整性约束</strong>三部分组成。</p>
+<ul>
+<li><strong>数据结构</strong>：描述数据库的静态特征，包括数据的组织方式、存储格式等。</li>
+<li><strong>数据操作</strong>：定义如何对数据进行操作（如查询、插入、更新、删除等），以及数据操作的规则。</li>
+<li><strong>完整性约束</strong>：确保数据的准确性和一致性。比如，某些字段的值必须唯一，或某些字段的值必须符合特定的格式等。</li>
+</ul>
+<p>常见的基本数据模型包括层次模型、网状模型、关系模型和面向对象模型。</p>
+<h3 id="2-1-层次模型"><a href="#2-1-层次模型" class="headerlink" title="2.1 层次模型"></a>2.1 层次模型</h3><p>层次模型用树形结构表示实体类型及实体间的联系，实体间的联系通常通过父子关系来表示。层次模型的优点是数据的存取路径是显式的，因此查询效率较高，尤其在查询简单、树形结构明显的数据时。</p>
+<ul>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li>数据组织通过层次结构进行，关系清晰，查询效率高。</li>
+<li>对于某些类型的应用（如组织结构、目录树等）特别适合。</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li><strong>只能表示1:n联系</strong>，如果需要表示m:n联系，通常需要一些复杂的设计手段，这使得模型不够灵活。</li>
+<li>查询和更新操作较为复杂，尤其当数据的层次结构发生变化时，应用程序的修改比较困难。</li>
+<li>在实际应用中，系统的扩展性较差。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-网状模型"><a href="#2-2-网状模型" class="headerlink" title="2.2 网状模型"></a>2.2 网状模型</h3><p>网状模型使用有向图表示实体类型及实体间的联系，其中每条边代表实体间的联系。网状模型的一个显著特点是支持m:n类型的关系，这使得它比层次模型更为灵活。</p>
+<ul>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li>支持1:n和m:n的联系，结构更为灵活，能够表达复杂的关系。</li>
+<li>查询效率较高，适用于复杂的多对多关系数据。</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li>编写应用程序比较复杂，需要开发者理解底层的逻辑结构。</li>
+<li>系统的管理和维护较为繁琐，特别是在数据模型变化时，可能需要对应用程序做出较大的调整。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-关系模型"><a href="#2-3-关系模型" class="headerlink" title="2.3 关系模型"></a>2.3 关系模型</h3><p>关系模型是目前最广泛使用的数据模型，它用表格结构来表示数据，每个表代表一个实体类型。表中的列（字段）表示实体的属性，而表与表之间的联系则通过<strong>外键</strong>来表示。关系模型的核心概念基于集合理论，数据通过关系（表）来组织。</p>
+<ul>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li><strong>数学基础严谨</strong>：关系模型建立在集合理论和关系代数的基础上，具有强大的理论支持。</li>
+<li><strong>结构简单、清晰</strong>：数据库的设计与使用都非常直观，用户容易理解。数据表由行和列组成，列表示属性，行表示数据记录。</li>
+<li><strong>数据独立性</strong>：用户和应用程序不需要了解数据的物理存储方式，可以通过SQL进行操作，简化了开发过程。</li>
+<li><strong>易于维护和扩展</strong>：数据结构的变化对应用程序影响较小，数据库设计的灵活性较高。</li>
+<li><strong>良好的查询能力</strong>：关系模型通过SQL语言提供丰富的数据操作能力，方便用户查询、修改和管理数据。</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li>对于一些复杂的、层次化的关系，可能需要额外的技巧来设计数据模型。</li>
+<li>在大规模、高并发的应用场景下，可能需要优化索引和查询策略，以确保性能。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-面向对象模型"><a href="#2-4-面向对象模型" class="headerlink" title="2.4 面向对象模型"></a>2.4 面向对象模型</h3><p>面向对象模型将数据库设计与面向对象编程相结合，用<strong>对象</strong>（包括数据和方法）来表示实体。这种模型不仅能存储数据，还能表示行为，适用于一些复杂的数据和行为的关系。</p>
+<ul>
+<li><p><strong>优点</strong>：</p>
+<ul>
+<li>支持多态、继承、封装等面向对象的特性，能够更自然地表达复杂的关系。</li>
+<li>适用于复杂应用，尤其是在需要处理复杂数据结构和行为时。</li>
+</ul>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<ul>
+<li>相比关系模型，面向对象模型的学习曲线较陡峭，开发和维护更加复杂。</li>
+<li>不如关系模型在大规模数据查询和管理方面高效，尤其是在数据库中的数据结构变化较大的时候。</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>不同的数据模型各自有其优缺点，选择合适的模型取决于具体的应用场景和需求。在数据库设计和开发过程中，<strong>概念数据模型</strong>帮助我们理解数据和关系的结构，而<strong>基本数据模型</strong>则更注重数据存储和操作的具体实现。</p>
 
                 
               </div>
@@ -316,7 +373,7 @@ git config --global --unset https.proxy
     
       <span class="category-chain">
         
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
+  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
   
   
 
@@ -343,8 +400,8 @@ git config --global --unset https.proxy
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Git报错： Failed to connect to github.com port 443 解决方案</div>
-      <div>http://vf2e.github.io/2016/06/10/Git报错： Failed to connect to github.com port 443 解决方案/</div>
+      <div>数据模型</div>
+      <div>http://vf2e.github.io/2018/05/10/数据模型1/</div>
     </div>
     <div class="license-meta">
       
@@ -356,7 +413,7 @@ git config --global --unset https.proxy
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2016年6月10日</div>
+          <div>2018年5月10日</div>
         </div>
       
       
@@ -388,7 +445,7 @@ git config --global --unset https.proxy
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2018/05/10/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B1/" title="数据模型">
+                      <a href="/2018/05/10/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/" title="数据模型">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">数据模型</span>
                         <span class="visible-mobile">上一篇</span>
@@ -397,6 +454,12 @@ git config --global --unset https.proxy
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2016/06/10/Git%E6%8A%A5%E9%94%99%EF%BC%9A%20Failed%20to%20connect%20to%20github.com%20port%20443%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="Git报错： Failed to connect to github.com port 443 解决方案">
+                        <span class="hidden-mobile">Git报错： Failed to connect to github.com port 443 解决方案</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
